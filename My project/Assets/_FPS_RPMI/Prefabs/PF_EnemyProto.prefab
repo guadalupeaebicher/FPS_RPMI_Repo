@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6720401675391433046}
   - component: {fileID: 1066297420988122065}
   - component: {fileID: 1920652380560569057}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1973157928356235137}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,9 +130,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7662415117923163513}
   - component: {fileID: 3454665963373728152}
-  m_Layer: 0
+  - component: {fileID: 7955422871680905391}
+  - component: {fileID: 6144403282082483256}
+  m_Layer: 6
   m_Name: EnemyProto
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,6 +180,45 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7955422871680905391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2777046565507291253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeaca439681752046a9eaabd729ffdc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  health: 0
+  maxHealth: 100
+  damageMat: {fileID: 2100000, guid: 0d423f9874cdb3040bf9e5d3ebd94613, type: 2}
+  enemyRend: {fileID: 1920652380560569057}
+  deathVfx: {fileID: 0}
+--- !u!195 &6144403282082483256
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2777046565507291253}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7997919196885120880
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +262,7 @@ GameObject:
   - component: {fileID: 6869757677527022596}
   - component: {fileID: 6801503086062042906}
   - component: {fileID: 4218045605893696488}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Orientation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
