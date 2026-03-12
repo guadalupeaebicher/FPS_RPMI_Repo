@@ -114,7 +114,7 @@ Transform:
   m_GameObject: {fileID: 2399080738085146532}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 3454665963373728152}
   - component: {fileID: 7955422871680905391}
   - component: {fileID: 6144403282082483256}
+  - component: {fileID: 2318055171398890169}
   m_Layer: 6
   m_Name: EnemyProto
   m_TagString: Enemy
@@ -219,6 +220,39 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2318055171398890169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2777046565507291253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4002b199777848b4c8dacfb2b3e84449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAIBase
+  agent: {fileID: 0}
+  target: {fileID: 0}
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  walkPointRange: 10
+  timeBetweenAttacks: 1
+  projectile: {fileID: 1999919268985455611, guid: 801800a9c78009a4f8d4f5203469e5a5, type: 3}
+  shootPoint: {fileID: 1973157928356235137}
+  shootSpeedY: 0
+  shootSpeedZ: 10
+  sightRange: 8
+  attackRange: 4
+  targetInSightRange: 0
+  targetInAttackRange: 0
+  stuckCheckTime: 2
+  stuckThreshold: 0.1
+  maxStuckDuration: 3
 --- !u!1 &7997919196885120880
 GameObject:
   m_ObjectHideFlags: 0
